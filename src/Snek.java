@@ -23,7 +23,7 @@ public class Snek {
         }
     }
 
-    public void printVision(){
+    public String getVision(){
         StringBuilder result = new StringBuilder();
         for (Character[] line:vision){
             for(Character part:line){
@@ -35,7 +35,7 @@ public class Snek {
             }
             result.append('\n');
         }
-        System.out.println(result.toString());
+        return result.toString();
     }
 
     public void eatMouse(){
@@ -46,42 +46,61 @@ public class Snek {
     public void move(int dir){
         moves++;
         switch (dir){
-            case (0) : if(vision[2][3]==null){home.endGame(true); return;}else if(vision[2][3] != '-'){ setY(Y-1);}return;
-            case (1) : if(vision[3][4]==null){home.endGame(true); return;}else if(vision[3][4] != '|'){ setX(X+1);}return;
-            case (2) : if(vision[4][3]==null){home.endGame(true); return;}else if(vision[4][3] != '-'){ setY(Y+1);}return;
-            case (3) : if(vision[3][2]==null){home.endGame(true); return;}else if(vision[3][2] != '|'){ setX(X-1);}
+            case (0) : if(vision[2][3]==null){
+                home.endGame(true);
+            } else if(vision[2][3] != '-' && vision[2][3] != '+'){
+                setY(Y-1);
+            }return;
+
+            case (1) : if(vision[3][4]==null){
+                home.endGame(true);
+            } else if(vision[3][4] != '|' && vision[3][4] != '+'){
+                setX(X+1);
+            }return;
+
+            case (2) : if(vision[4][3]==null){
+                home.endGame(true);
+            } else if(vision[4][3] != '-' && vision[4][3] != '+'){
+                setY(Y+1);
+            }return;
+
+            case (3) : if(vision[3][2]==null){
+                home.endGame(true);
+            } else if(vision[3][2] != '|' && vision[3][2] != '+'){
+                setX(X-1);
+            }
         }
     }
 
-    public int getX() {
+    int getX() {
         return X;
     }
 
-    public void setX(int x) {
+    void setX(int x) {
         X = x;
     }
 
-    public int getY() {
+    int getY() {
         return Y;
     }
 
-    public void setY(int y) {
+    void setY(int y) {
         Y = y;
     }
 
-    public boolean isBig() {
+    boolean isBig() {
         return big;
     }
 
-    public void setBig(boolean grow) {
+    void setBig(boolean grow) {
         big = grow;
     }
 
-    public void setVision(Character[][] vis){
+    void setVision(Character[][] vis){
         vision = vis;
     }
 
-    public Character getSnek(){
+    Character getSnek(){
         if(big){
             return 'S';
         } else {
@@ -89,11 +108,11 @@ public class Snek {
         }
     }
 
-    public int getValue(){
+    int getValue(){
         return value;
     }
 
-    public void foundExit(int amount){
+    void foundExit(int amount){
         value+=amount-moves;
     }
 }
