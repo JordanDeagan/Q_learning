@@ -1,10 +1,15 @@
-public class Snek {
+import java.util.Random;
+
+class Snek {
     private int X,Y;
+    private static final int UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3;
     private Character[][] vision;
     private boolean big;
     private int value, moves;
     private Maze home;
-    public Snek(int x, int y, Character[][] vis, Maze maze){
+    private Random rand;
+
+    Snek(int x, int y, Character[][] vis, Maze maze){
         X = x;
         Y = y;
         big = false;
@@ -12,62 +17,87 @@ public class Snek {
         value = 0;
         home = maze;
         moves = 0;
+        rand = new Random();
     }
 
-    public void getsEaten(){
+    void getsEaten(){
         if(isBig()){
             setBig(false);
         }
         else {
-            home.endGame(false);
+            value = 0;
+            home.endGame(1);
         }
     }
 
-    public String getVision(){
+    int getNumMoves(){
+        return moves;
+    }
+
+    String getSight(){
         StringBuilder result = new StringBuilder();
         for (Character[] line:vision){
             for(Character part:line){
-                if(part!=null) {
-                    result.append(part);
-                } else {
-                    result.append(' ');
-                }
+                result.append(part);
             }
-            result.append('\n');
         }
         return result.toString();
     }
 
-    public void eatMouse(){
+    Character[][] getVision(){
+        return vision;
+    }
+
+    void eatMouse(){
         setBig(true);
         value += 1;
     }
 
-    public void move(int dir){
+    void move(int dir){
         moves++;
         switch (dir){
-            case (0) : if(vision[2][3]==null){
-                home.endGame(true);
-            } else if(vision[2][3] != '-' && vision[2][3] != '+'){
-                setY(Y-1);
+            case (UP) : if(vision[2][3]==null){
+                home.endGame(0);
+            } else {
+                if(vision[2][3] != '-' && vision[2][3] != '+'){
+                    setY(Y-1);
+                } else {
+                    moves--;
+                    move(rand.nextInt(4));
+                }
             }return;
 
-            case (1) : if(vision[3][4]==null){
-                home.endGame(true);
-            } else if(vision[3][4] != '|' && vision[3][4] != '+'){
-                setX(X+1);
+            case (RIGHT) : if(vision[3][4]==null){
+                home.endGame(0);
+            }  else {
+                if (vision[3][4] != '|' && vision[3][4] != '+') {
+                    setX(X + 1);
+                } else {
+                    moves--;
+                    move(rand.nextInt(4));
+                }
             }return;
 
-            case (2) : if(vision[4][3]==null){
-                home.endGame(true);
-            } else if(vision[4][3] != '-' && vision[4][3] != '+'){
-                setY(Y+1);
+            case (DOWN) : if(vision[4][3]==null){
+                home.endGame(0);
+            }  else {
+                if (vision[4][3] != '-' && vision[4][3] != '+') {
+                    setY(Y + 1);
+                } else {
+                    moves--;
+                    move(rand.nextInt(4));
+                }
             }return;
 
-            case (3) : if(vision[3][2]==null){
-                home.endGame(true);
-            } else if(vision[3][2] != '|' && vision[3][2] != '+'){
-                setX(X-1);
+            case (LEFT) : if(vision[3][2]==null){
+                home.endGame(0);
+            }  else {
+                if (vision[3][2] != '|' && vision[3][2] != '+') {
+                    setX(X - 1);
+                } else {
+                    moves--;
+                    move(rand.nextInt(4));
+                }
             }
         }
     }
@@ -100,7 +130,7 @@ public class Snek {
         vision = vis;
     }
 
-    Character getSnek(){
+    Character getSize(){
         if(big){
             return 'S';
         } else {

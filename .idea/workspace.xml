@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60b3d032-5739-4e3b-afa1-6248c7b80558" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/Q_learning/Learning.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Q_learning/META-INF/Q_learning.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/m-maze.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Learning.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Q_learning/Heron.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Q_learning/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Q_learning/Maze.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Q_learning/Mouse.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Q_learning/RunMaze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Q_learning/RunMaze.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Q_learning/Snek.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Q_learning/Snek.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Heron.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Q_learning/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/test.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mouse.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RunMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RunMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Snek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Snek.java" afterDir="false" />
     </list>
@@ -24,35 +30,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Maze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
+            <state relative-caret-position="377">
+              <caret line="114" column="16" lean-forward="true" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#505#581#0" />
-                <element signature="e#614#658#0" />
-                <element signature="e#671#730#0" />
-                <element signature="e#753#821#0" />
-                <element signature="e#834#873#0" />
-                <element signature="e#896#940#0" />
-                <element signature="e#953#1029#0" />
-                <element signature="e#1062#1106#0" />
-                <element signature="e#1285#1324#0" />
-                <element signature="e#1347#1391#0" />
-                <element signature="e#1404#1480#0" />
-                <element signature="e#1513#1557#0" />
-                <element signature="e#1595#1977#1" />
-                <element signature="e#1638#1695#0" />
-                <element signature="e#1718#1799#0" />
-                <element signature="e#1907#1967#1" />
-                <element signature="e#2017#2089#1" />
-                <element signature="e#2069#2152#1" />
+                <element signature="method#Maze#0;class#Maze#0" />
                 <element signature="method#getSnekVision#0;class#Maze#0" />
+                <element signature="method#placeSnek#0;class#Maze#0" />
+                <element signature="method#placeSnek#1;class#Maze#0" />
+                <element signature="method#update#0;class#Maze#0" />
                 <element signature="method#snekNearHeron#0;class#Maze#0" />
-                <element signature="method#endGame#0;class#Maze#0" />
                 <element signature="method#heronAttacks#0;class#Maze#0" />
+                <element signature="method#moveMouse#0;class#Maze#0" />
+                <element signature="method#reset#0;class#Maze#0" />
+                <element signature="method#readFile#0;class#Maze#0" />
                 <element signature="method#toString#0;class#Maze#0" />
               </folding>
             </state>
@@ -62,21 +55,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Snek.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="555">
+              <caret line="129" column="21" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="21" />
               <folding>
+                <element signature="method#Snek#0;class#Snek#0" />
+                <element signature="method#getsEaten#0;class#Snek#0" />
+                <element signature="e#529#567#1" />
+                <element signature="e#581#621#1" />
+                <element signature="method#getSight#0;class#Snek#0" />
                 <element signature="method#eatMouse#0;class#Snek#0" />
-                <element signature="method#getSnek#0;class#Snek#0" />
+                <element signature="method#move#0;class#Snek#0" />
+                <element signature="method#getSize#0;class#Snek#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Learning.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8">
+              <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding>
+                <element signature="method#chooseMove#0;class#Learning#0" />
+                <element signature="method#getState#0;class#Learning#0" />
+                <element signature="e#2929#2930#0" expanded="true" />
+                <element signature="e#2979#2980#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RunMaze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="180">
+              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -93,6 +107,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>moving</find>
+      <find>Float</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,8 +119,9 @@
         <option value="$PROJECT_DIR$/src/Heron.java" />
         <option value="$PROJECT_DIR$/src/Mouse.java" />
         <option value="$PROJECT_DIR$/src/Snek.java" />
-        <option value="$PROJECT_DIR$/src/RunMaze.java" />
         <option value="$PROJECT_DIR$/src/Maze.java" />
+        <option value="$PROJECT_DIR$/src/RunMaze.java" />
+        <option value="$PROJECT_DIR$/src/Learning.java" />
       </list>
     </option>
   </component>
@@ -121,7 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -144,6 +159,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,10 +227,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="29" width="1370" height="717" extended-state="6" />
+    <frame x="-2" y="29" width="1370" height="717" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22954546" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23106061" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -223,7 +239,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.72602737" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44178084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,68 +263,62 @@
     <option name="LAST_COMMIT_MESSAGE" value="adding to git" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Heron.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Mouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Heron.java" />
+    <entry file="file://$PROJECT_DIR$/src/Mouse.java" />
     <entry file="file://$PROJECT_DIR$/src/Snek.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="555">
+          <caret line="129" column="21" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="21" />
           <folding>
+            <element signature="method#Snek#0;class#Snek#0" />
+            <element signature="method#getsEaten#0;class#Snek#0" />
+            <element signature="e#529#567#1" />
+            <element signature="e#581#621#1" />
+            <element signature="method#getSight#0;class#Snek#0" />
             <element signature="method#eatMouse#0;class#Snek#0" />
-            <element signature="method#getSnek#0;class#Snek#0" />
+            <element signature="method#move#0;class#Snek#0" />
+            <element signature="method#getSize#0;class#Snek#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="114" column="16" lean-forward="true" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
+          <folding>
+            <element signature="method#Maze#0;class#Maze#0" />
+            <element signature="method#getSnekVision#0;class#Maze#0" />
+            <element signature="method#placeSnek#0;class#Maze#0" />
+            <element signature="method#placeSnek#1;class#Maze#0" />
+            <element signature="method#update#0;class#Maze#0" />
+            <element signature="method#snekNearHeron#0;class#Maze#0" />
+            <element signature="method#heronAttacks#0;class#Maze#0" />
+            <element signature="method#moveMouse#0;class#Maze#0" />
+            <element signature="method#reset#0;class#Maze#0" />
+            <element signature="method#readFile#0;class#Maze#0" />
+            <element signature="method#toString#0;class#Maze#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Learning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="method#chooseMove#0;class#Learning#0" />
+            <element signature="method#getState#0;class#Learning#0" />
+            <element signature="e#2929#2930#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RunMaze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#505#581#0" />
-            <element signature="e#614#658#0" />
-            <element signature="e#671#730#0" />
-            <element signature="e#753#821#0" />
-            <element signature="e#834#873#0" />
-            <element signature="e#896#940#0" />
-            <element signature="e#953#1029#0" />
-            <element signature="e#1062#1106#0" />
-            <element signature="e#1285#1324#0" />
-            <element signature="e#1347#1391#0" />
-            <element signature="e#1404#1480#0" />
-            <element signature="e#1513#1557#0" />
-            <element signature="e#1595#1977#1" />
-            <element signature="e#1638#1695#0" />
-            <element signature="e#1718#1799#0" />
-            <element signature="e#1907#1967#1" />
-            <element signature="e#2017#2089#1" />
-            <element signature="e#2069#2152#1" />
-            <element signature="method#getSnekVision#0;class#Maze#0" />
-            <element signature="method#snekNearHeron#0;class#Maze#0" />
-            <element signature="method#endGame#0;class#Maze#0" />
-            <element signature="method#heronAttacks#0;class#Maze#0" />
-            <element signature="method#toString#0;class#Maze#0" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
         </state>
       </provider>
     </entry>
